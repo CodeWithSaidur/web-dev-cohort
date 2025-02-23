@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="button"] {
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1 id="Text">Change My Color!</h1>
+      <p>Click a button to change the text color:</p>
+    </section>
+    <section>
+      <input
+        style="background-color: Red"
+        onclick="Red()"
+        type="button"
+        value="Red"
+      />
+      <input
+        style="background-color: green"
+        onclick="Green()"
+        type="button"
+        value="Green"
+      />
+      <input
+        style="background-color: blue"
+        onclick="Blue()"
+        type="button"
+        value="Blue"
+      />
+      <input
+        style="background-color: Purple"
+        onclick="Purple()"
+        type="button"
+        value="Purple"
+      />
+      <input
+        style="background-color: null"
+        onclick="Reset()"
+        type="button"
+        value="Reset"
+      />
+    </section>
+  </body>
+  <script>
+    function Red() {
+      const Text = document.getElementById("Text");
+      Text.setAttribute("style", "Color : Red");
+    }
+    function Green() {
+      const Text = document.getElementById("Text");
+      Text.setAttribute("style", "Color : Green");
+    }
+    function Blue() {
+      const Text = document.getElementById("Text");
+      Text.setAttribute("style", "Color : Blue");
+    }
+    function Purple() {
+      const Text = document.getElementById("Text");
+      Text.setAttribute("style", "Color : Purple");
+    }
+    function Reset() {
+      const Text = document.getElementById("Text");
+      Text.setAttribute("style", "Color : none");
+    }
+  </script>
+</html>

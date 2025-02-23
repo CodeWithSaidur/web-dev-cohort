@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <style>
+      * {
+        zoom: 100%;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+      section {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 20px auto;
+      }
+      h1 {
+        font-size: 24px;
+        color: #333;
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      input[type="button"] {
+        background-color: #060d8f;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      input[type="button"]:hover {
+        background-color: #1034d4;
+      }
+      ol {
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+      li input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      li button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      li button:hover {
+        background-color: #c82333;
+      }
+      li.completed {
+        text-decoration: line-through;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Task List</h1>
+      <input type="text" id="Input_Task" placeholder="Enter Task" />
+      <input type="button" id="Add_Task" value="Add Task" />
+    </section>
+    <section>
+      <ol id="List_Task"></ol>
+      <h4>Total Tasks: <span id="Total_tasks">0</span></h4>
+      <h4>Completed Tasks: <span id="Completed_tasks">0</span></h4>
+    </section>
+  </body>
+  <script>
+    // Get elements
+    let addButton = document.getElementById("Add_Task");
+    let inputTask = document.getElementById("Input_Task");
+    let listTask = document.getElementById("List_Task");
+    let totalTasks = document.getElementById("Total_tasks");
+    let completedTasks = document.getElementById("Completed_tasks");
+
+    // Function to update total tasks count
+    function updateTotalTasks() {
+      totalTasks.innerText = listTask.children.length;
+    }
+
+    // Function to update completed tasks count
+    function updateCompletedTasks() {
+      let completedCount = document.querySelectorAll("li.completed").length;
+      completedTasks.innerText = completedCount;
+    }
+
+    // Function to add a new task
+    addButton.addEventListener("click", () => {
+      let taskText = inputTask.value.trim();
+      if (taskText === "") {
+        alert("Enter a Task 🔥");
+        return;
+      }
+
+      let li = document.createElement("li");
+      let checkbox = document.createElement("input");
+      let del = document.createElement("button");
+
+      // Checkbox setup
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          li.classList.add("completed");
+        } else {
+          li.classList.remove("completed");
+        }
+        updateCompletedTasks();
+      });
+
+      // Delete button setup
+      del.textContent = "Del";
+      del.addEventListener("click", () => {
+        li.remove();
+        updateTotalTasks();
+        updateCompletedTasks();
+      });
+
+      // Append elements
+      li.appendChild(checkbox);
+      li.appendChild(document.createTextNode(taskText)); 
+      li.appendChild(del);
+      listTask.appendChild(li);
+
+      // Clear input and update counters
+      inputTask.value = "";
+      updateTotalTasks();
+    });
+  </script>
+</html>

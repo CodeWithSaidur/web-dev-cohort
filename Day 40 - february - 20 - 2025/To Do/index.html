@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    "
+  >
+    <div
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <div style="margin-bottom: 20px">
+        <h1 style="margin: 0 0 15px 0; color: #333; font-size: 24px">TO DO</h1>
+        <input
+          id="InputBox"
+          type="text"
+          placeholder="Add Task"
+          style="
+            padding: 8px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+          "
+        />
+        <input
+          id="AddButton"
+          type="button"
+          value="Add"
+          style="
+            padding: 8px 15px;
+            background-color: #396acd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          "
+        />
+      </div>
+
+      <ol
+        id="ToDoList"
+        style="
+          padding-left: 20px;
+          margin: 0;
+          list-style-position: inside;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        "
+      ></ol>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

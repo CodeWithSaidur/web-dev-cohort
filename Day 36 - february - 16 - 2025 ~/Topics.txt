@@ -1,0 +1,4 @@
+DOM
+
+1. Function warm up
+2. DOM

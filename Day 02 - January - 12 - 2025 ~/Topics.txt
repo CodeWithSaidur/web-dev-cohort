@@ -1,0 +1,6 @@
+Introduction to web
+1. OSI Model
+2. TCP -> Client -> Server
+3. TCP handshake
+4. Protocol
+5. HTML basic

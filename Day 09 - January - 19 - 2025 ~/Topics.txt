@@ -1,0 +1,18 @@
+introduction to CSS 
+
+1. User agent stylesheets
+2. implantation
+    inline 
+    external
+    style tag
+
+3. targeting 
+    #ID
+    .class
+    <tag>
+
+4. Specificity algorithm
+
+5. inline and block level element
+
+6. flex

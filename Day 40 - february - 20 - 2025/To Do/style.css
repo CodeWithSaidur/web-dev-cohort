@@ -1,0 +1,33 @@
+
+/* Delete Button */
+.del {
+    background-color: rgb(255, 69, 69);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 50px;
+}
+
+.del:hover {
+    background-color: rgb(200, 0, 0);
+}
+
+/* Edit Button */
+.edit {
+    background-color: rgb(0, 200, 83);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s;
+    width: 50px;
+}
+
+.edit:hover {
+    background-color: rgb(0, 150, 63);
+}

@@ -1,0 +1,18 @@
+Number property and methods
+
+1. Number.MAX_VALUE  // Largest positive number
+2. Number.MIN_SAFE_INTEGER // Smallest safe integer
+3. Infinity
+4. NAN
+
+5. Number()	Converts a value to a number
+6. parseInt()	Converts a string to an integer
+7. parseFloat()	Converts a string to a floating-point number
+
+8. isFinite()	Checks if a value is a finite number
+9. isNaN()	Checks if a value is an NAN
+
+10. toFixed(n)	Rounds a number to n decimal places	
+11. toPrecision(n)	Formats a number with n significant digits	
+12. toExponential(n)	Converts a number to exponential notation	
+13. toString(base)	Converts a number to a string (in a given base)

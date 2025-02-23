@@ -1,0 +1,24 @@
+Array Method
+
+1. .push(value) → Adds to the end
+2. .pop() → Removes the last element
+3. .unshift(value) → Adds to the beginning
+4. .shift() → Removes the first element
+
+5. .forEach(callback) → Runs a function for each item
+6. .map(callback) → Creates a new array with modified values
+
+7. .indexOf(value) → Returns index, or -1 if not found
+8. .includes(value) → Returns true if found, else false
+9. .find(callback) → Returns the first matching element
+10. .filter(callback) → Returns a new array of matching elements
+
+11. .sort() → Sorts alphabetically *modifies the array*
+12. .reverse() → Reverses the order
+
+13. .join(separator) → Converts array to string
+14. .split(separator) → Converts string to array
+15. .concat(array) → Merges arrays
+
+16. .slice(start, end) → Extracts a section (does not modify)
+17. .splice(start, deleteCount, ...items) → Adds/removes elements

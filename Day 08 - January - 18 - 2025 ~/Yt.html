@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video</title>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            new YT.Player('player', {
+                videoId: '2U_tYBoxQgs', // Replace with your video ID
+                playerVars: {
+                    autoplay: 1, 
+                    controls: 1, 
+                    modestbranding: 1,
+                    controls
+                }
+            });
+        }
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <div id="player"></div>
+</body>
+</html>

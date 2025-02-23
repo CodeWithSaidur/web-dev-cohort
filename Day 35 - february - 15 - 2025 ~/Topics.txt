@@ -1,0 +1,9 @@
+JS Object and Prototypes
+
+Class Object 
+0. Class
+1. DRY
+2. Class
+3. Class constructor
+4. prototypal inheritance or proto type Chaining
+5. Class inheritance

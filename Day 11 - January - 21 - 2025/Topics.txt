@@ -1,0 +1,5 @@
+Positioning
+1. Static
+2. Relative
+3. Absolute
+4. Fixed

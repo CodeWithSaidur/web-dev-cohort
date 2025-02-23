@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        zoom: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter task" id="Input-Value" />
+    <button id="Add-task">Add</button>
+    <ul id="Task">
+      <li>Task 1</li>
+    </ul>
+  </body>
+  <script>
+    let Input_Value = document.getElementById("Input-Value");
+    let Add_task = document.getElementById("Add-task");
+    let Task = document.getElementById("Task");
+
+    let li = document.createElement("li");
+
+    Add_task.addEventListener("click", () => {
+      console.log(`${Input_Value.value} ${li.innerText}`);
+
+      document.append('Task',li)
+
+      Input_Value.value = "";
+    });
+  </script>
+</html>

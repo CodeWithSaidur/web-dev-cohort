@@ -1,0 +1,23 @@
+Git and Github
+
+1. git init
+2. git status
+4. git add .
+5. git commit -m "Your commit message"
+6. git log
+7. git branch
+8. git branch <branch-name>
+9. git checkout <branch-name>
+10. git checkout -b <new-branch>
+11. git merge <branch-name>
+12. git remote add origin <repository_url>
+13. git push -u origin <branch-name>
+14. git push
+15. git pull origin <branch-name>
+16. git stash
+17. git stash pop
+18. git reset --soft HEAD~1  # Undo last commit but keep changes staged
+19. git reset --hard HEAD~1  # Undo last commit and remove changes
+20. git checkout -- <file>   # Discard changes in a file
+
+important but not list git clone <repository_url>

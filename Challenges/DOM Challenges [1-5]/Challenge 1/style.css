@@ -1,0 +1,123 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    /* Swapped width and height */
+    height: 60px;
+    /* Swapped width and height */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateY(-26px);
+    /* Changed from translateX to translateY */
+    -ms-transform: translateY(-26px);
+    /* Changed from translateX to translateY */
+    transform: translateY(-26px);
+    /* Changed from translateX to translateY */
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.Light {
+    width: 200px;
+    /* Increased from 100px */
+    height: 200px;
+    /* Increased from 100px */
+    background: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 150, 0.8);
+
+    /* Create the glass effect */
+    background: radial-gradient(circle at 50% 40%,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 200, 0.6) 60%,
+            rgba(255, 255, 150, 0.4) 100%);
+}
+
+/* Add the bulb base */
+.Light::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    /* Increased proportionally */
+    height: 60px;
+    /* Increased proportionally */
+    background: #737373;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+    /* Adjusted for new size */
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(to bottom,
+            #a0a0a0 0%,
+            #737373 40%,
+            #4a4a4a 100%);
+}
+
+/* Add screw threads to the base */
+.Light::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    /* Increased proportionally */
+    height: 30px;
+    /* Increased proportionally */
+    background: repeating-linear-gradient(to bottom,
+            #4a4a4a,
+            #4a4a4a 4px,
+            #737373 4px,
+            #737373 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -80px;
+    /* Adjusted for new size */
+    border-radius: 0 0 5px 5px;
+}

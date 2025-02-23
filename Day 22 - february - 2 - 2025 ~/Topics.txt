@@ -1,0 +1,3 @@
+fundamentals
+
+1. variable and datatype

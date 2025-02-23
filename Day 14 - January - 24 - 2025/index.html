@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .items {
+        background-color: aqua;
+        height: 140px;
+      }
+      .item-5 {
+        background-color: aquamarine;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+
+      .item-1 {
+        background-color: bisque;
+        grid-row: 1/3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="items item-1">element 1</div>
+      <div class="items">element 2</div>
+      <div class="items">element 3</div>
+      <div class="items">element 4</div>
+      <div class="items item-5">element 5</div>
+      <div class="items">element 6</div>
+    </div>
+  </body>
+</html>

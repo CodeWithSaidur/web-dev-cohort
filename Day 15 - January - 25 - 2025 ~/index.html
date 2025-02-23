@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-gap: 10px; /* shorthand for grid-row-gap and grid-column-gap */
+            justify-items: center; /* align items horizontally */
+            align-items: center; /* align items vertically */
+            justify-content: center; /* align the whole grid horizontally */
+            align-content: center; /* align the whole grid vertically */
+            height: 100vh; /* Full viewport height */
+            border: 2px solid black;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #3498db;
+            background: #85c1e9;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .item-1 {
+            grid-column: span 2; /* Span across 2 columns */
+        }
+
+        .item-2 {
+            grid-row: span 2; /* Span across 2 rows */
+        }
+
+        .item-3 {
+            grid-area: 2 / 2 / 4 / 4; /* row-start / col-start / row-end / col-end */
+        }
+
+        .item-4 {
+            justify-self: start; /* Align individual item horizontally */
+            align-self: end; /* Align individual item vertically */
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Grid Demo</h1>
+<div class="grid-container">
+    <div class="item item-1">Item 1 (Column Span)</div>
+    <div class="item item-2">Item 2 (Row Span)</div>
+    <div class="item item-3">Item 3 (Grid Area)</div>
+    <div class="item item-4">Item 4 (Self Alignment)</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+polyfills
+
+1. map 
+2. forEach
