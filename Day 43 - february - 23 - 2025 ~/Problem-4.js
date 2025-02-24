@@ -1,23 +1,31 @@
 /*
-Problem Statement:
-Given an object containing employee details with their names and salaries, write
-a JavaScript program to reduce each employee's salary by 2% and update the 
-original object accordingly.
+The problem statement
+"Calculate the total expenses for each category from the expenses array and 
+generate an expense report."
 */
 
-let employee_details = [
-  {
-    name: "Sabed",
-    salarie: 15,
-  },
-  {
-    name: "Jabed",
-    salarie: 15,
-  },
-  {
-    name: "Aju",
-    salarie: 15,
-  },
+let expenses = [
+  { description: "Groceries", amount: 50, category: "Food" },
+  { description: "Electricity Bill", amount: 100, category: "Utilities" },
+  { description: "Dinner", amount: 30, category: "Food" },
+  { description: "Internet Bill", amount: 50, category: "Utilities" },
 ];
 
+// Category-wise Expenses Report
+let Category_wise_Expenses_report = expenses.reduce(
+  (accumulator, currentValue) => {
+    if (!accumulator[currentValue.category]) {
+      accumulator[currentValue.category] = 0;
+    }
+    accumulator[currentValue.category] += currentValue.amount;
+    return accumulator;
+  },
+  {}
+);
+console.log(Category_wise_Expenses_report);
 
+// total Amount
+let total_amount = expenses.reduce((accumulator, currentValue) => {
+  return (accumulator += currentValue.amount);
+}, 0);
+console.log("total Amount :", total_amount);

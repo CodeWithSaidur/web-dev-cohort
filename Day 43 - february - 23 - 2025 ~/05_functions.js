@@ -2,8 +2,8 @@ function greet(name) {
   console.log(`Hello ${name}`);
 }
 
-// greet("Hitesh");
-// greet("Piyush");
+greet("Hitesh");
+greet("Piyush");
 
 let globalVar = "I am global";
 
@@ -13,7 +13,7 @@ function modifyGlobal() {
   console.log(blockScopedVar);
 }
 
-// modifyGlobal();
+modifyGlobal();
 
 let config = (function () {
   let settings = {

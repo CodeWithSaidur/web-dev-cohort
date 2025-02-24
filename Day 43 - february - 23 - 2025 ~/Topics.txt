@@ -1,0 +1,23 @@
+problem 1 - 5 
+
+Function 
+    call()
+    apply()
+    bind()  -> it return a Function()
+
+setTimeout -> under the hood
+    call stack
+    fifo
+    js Engine
+    Callback Queue
+    Event Loop
+
+promise
+
+Starvation
+
+GEC 
+
+Hosting  
+    local
+    global
