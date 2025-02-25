@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div>
+      <h1 id="Time"></h1>
+      <p id="Date"></p>
+    </div>
+  </body>
+  <script>
+    window.onload = function () {
+      let My_Time = document.getElementById("Time");
+      let My_Date = document.getElementById("Date");
+
+      setInterval(() => {
+        let now = new Date();
+        let H = now.getHours() % 12 || 12;
+        let M = now.getMinutes().toString().padStart(2, "0");
+        let S = now.getSeconds().toString().padStart(2, "0");
+        let AM_PM = now.getHours() >= 12 ? "PM" : "AM";
+
+        My_Time.textContent = `${H} : ${M} : ${S} : ${AM_PM}`;
+
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+
+        My_Date.textContent = now.toLocaleDateString(undefined, options);
+      }, 1000);
+    };
+  </script>
+</html>

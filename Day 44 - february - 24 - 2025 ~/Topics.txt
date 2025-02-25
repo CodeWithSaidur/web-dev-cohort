@@ -1,0 +1,36 @@
+1. Negative indexing
+2. introduction to Proxy
+3. Digital Watch
+4. Promise
+
+    important concepts in JavaScript
+    1. Debouncing  
+    2. Throttling  
+    3. Closure  
+    4. Currying  
+    5. Promise & Async/Await  
+    6. Event Bubbling & Capturing  
+    7. Memoization  
+    8. Hoisting  
+    9. Scope (Global, Local, Block)  
+    10. Prototype & Prototypal Inheritance  
+    11. Callback Functions  
+    12. Higher-Order Functions  
+    13. IIFE (Immediately Invoked Function Expression)  
+    14. Module Pattern  
+    15. Rest & Spread Operators  
+    16. Destructuring  
+    17. SetTimeout & SetInterval  
+    18. Map, Filter & Reduce  
+    19. WeakMap & WeakSet  
+    20. Symbol & Iterators  
+    21. Generators & Yield  
+    22. Web Storage API (LocalStorage, SessionStorage, Cookies)  
+    23. Event Loop & Microtasks  
+    24. Shadow DOM & Virtual DOM  
+    25. Service Workers & PWA  
+    26. WebSockets & Fetch API  
+    27. Strict Mode (`"use strict"`)  
+    28. Tagged Templates  
+    29. Lazy Loading  
+    30. Function Composition  
