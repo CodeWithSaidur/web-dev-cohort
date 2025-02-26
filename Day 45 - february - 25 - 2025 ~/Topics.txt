@@ -1,0 +1,9 @@
+1. Proxy
+2. How Can we Achieve "Asynchronous" i.e Non Blocking 
+   Nature without using promise. 
+    - callback -> function as a argument
+    - callback hell
+3. async await   -> a async function always return promise
+    // ham kisibi function ko async bana sakths ha  or yea hamasa 1 promice return 
+    // kortha ha so ham .then() .catch() ka sakthi laga saktha hu
+
