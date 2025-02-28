@@ -1,0 +1,13 @@
+Polyfill
+    1.forEach
+    2.map
+    3.reduce
+
+function
+    4. higher order function
+    5. Access arguments
+    6. Closer or lexical Scoping 
+    7. Storing setTimeout
+    8. call apply bind
+    9. Debouncing
+    10.Throttling

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce Example</title>
+  </head>
+  <body>
+    <button id="Btn">Click</button>
+    <h1 id="Pressed"></h1>
+    <h1 id="Target"></h1>
+  </body>
+  <script>
+    let Btn = document.getElementById("Btn");
+    let Pressed = document.getElementById("Pressed");
+    let Target = document.getElementById("Target");
+
+    let Pressed_Counter = 0;
+    let Target_Counter = 0;
+    let debounceTimeout;
+
+    Btn.addEventListener("click", () => {
+      Pressed.innerHTML = ++Pressed_Counter;
+      Debounce();
+    });
+
+    function Debounce() {
+      clearTimeout(debounceTimeout);
+      debounceTimeout = setTimeout(() => {
+        Target.innerHTML = ++Target_Counter;
+      }, 600); 
+    }
+  </script>
+</html>
