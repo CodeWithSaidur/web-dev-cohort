@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop Task Manager</title>
+    <style>
+      body {
+        background-color: rgb(56, 57, 66);
+        zoom: 150%;
+      }
+      main {
+        color: aliceblue;
+        display: flex;
+        border-radius: 10px;
+        gap: 10px;
+      }
+      div {
+        border: 1px solid;
+        height: 500px;
+        width: 500px;
+        border-radius: 10px;
+        padding: 10px;
+        overflow-y: auto;
+      }
+      #Add {
+        height: 30px;
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 4px;
+      }
+      .Dynamic_task_aadd_by_js {
+        border: 1px solid;
+        border-radius: 10px;
+        height: 30px;
+        width: 95%;
+        margin: 10px;
+        padding: 1%;
+        cursor: grab;
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="Divs" id="div_1">
+        <p class="Dynamic_task_aadd_by_js" draggable="true">Task 1</p>
+        <p class="Dynamic_task_aadd_by_js" draggable="true">Task 2</p>
+      </div>
+      <div class="Divs" id="div_2"></div>
+    </main>
+    <section style="display: flex; justify-content: center">
+      <button id="Add">Add</button>
+    </section>
+  </body>
+  <script>
+    let Add = document.getElementById("Add");
+    let div_1 = document.getElementById("div_1");
+    let div_2 = document.getElementById("div_2");
+    let draggedItem = null;
+
+    function addDragAndDropListeners(task) {
+      task.addEventListener("dragstart", (e) => {
+        draggedItem = e.target;
+        setTimeout(() => {
+          e.target.style.display = "none";
+        }, 0);
+      });
+
+      task.addEventListener("dragend", (e) => {
+        setTimeout(() => {
+          e.target.style.display = "block";
+          draggedItem = null;
+        }, 0);
+      });
+    }
+
+    document.querySelectorAll(".Dynamic_task_aadd_by_js").forEach((task) => {
+      addDragAndDropListeners(task);
+    });
+
+    Add.addEventListener("click", () => {
+      let Text = prompt("Enter Task");
+      if (Text) {
+        let P = document.createElement("p");
+        P.innerText = Text;
+        P.className = "Dynamic_task_aadd_by_js";
+        P.draggable = true;
+        div_1.appendChild(P);
+        addDragAndDropListeners(P);
+      }
+    });
+
+    document.querySelectorAll(".Divs").forEach((div) => {
+      div.addEventListener("dragover", (e) => {
+        e.preventDefault();
+      });
+
+      div.addEventListener("drop", (e) => {
+        if (draggedItem) {
+          div.appendChild(draggedItem);
+        }
+      });
+    });
+  </script>
+</html>
