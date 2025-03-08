@@ -1,3 +1,2 @@
 Revision and practice
 1 let and const
-2 
