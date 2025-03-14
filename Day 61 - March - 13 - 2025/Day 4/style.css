@@ -1,0 +1,19 @@
+#generateQuote {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff49;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#generateQuote:hover {
+    background-color: #007bff;
+}
+
+#quoteDisplay {
+    margin-top: 15px;
+    font-size: 18px;
+    font-style: italic;
+}

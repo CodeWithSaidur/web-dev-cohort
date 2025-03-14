@@ -1,1 +1,3 @@
 /Challenges
+**/node_modules/
+**/.env
