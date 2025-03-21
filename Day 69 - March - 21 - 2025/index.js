@@ -1,54 +1,32 @@
-const express = require("express");
-const users = require("./MOCK_DATA.json");
+import express from "express";
+import data from "./data.json" assert { type: "json" };
+import fs from "fs";
 
 const app = express();
 const PORT = 3000;
 
-app.get("/api", (req, res) => {
-  return res.json(users);
-});
+// middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-// intro to SSR
-app.get("/api/user", (req, res) => {
-  const html = `
-    <ol>
-        ${users.map((user) => {
-          return `<li>${user.name}</li>`;
-        })}
-    </ol>
-    `;
-  res.send(html);
-});
+app
+  //create a route
+  .route("/api/v1/data")
 
-// simple post rout
-app.post("/api/user", (req, res) => {
-  res.json({
-    status: "Pending",
+  // get req
+  .get((req, res) => {
+    res.json(data);
+  })
+  // post req
+  .post((req, res) => {
+    const body = req.body;
+    data.push({ ...body, id: data.length + 1 }); // Add new data with an ID
+
+    // Write updated data back to data.json
+    fs.writeFile("./data.json", JSON.stringify(data), (err) => {
+      res.json({ data: body });
+    });
   });
-});
-
-// get by id
-app.get("/api/user/:id", (req, res) => {
-  const id = Number(req.params.id);
-  const user = users.find((user) => {
-    user.id === id;
-  });
-  return res.json(user);
-});
-
-// patch matlab Edit i.e edit by id
-app.patch("/api/user/:id", () => {
-  res.json({
-    status: "Pending",
-  });
-});
-
-// delete matlab Edit i.e edit by id
-app.delete("/api/user/:id", () => {
-  res.json({
-    status: "Pending",
-  });
-});
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
