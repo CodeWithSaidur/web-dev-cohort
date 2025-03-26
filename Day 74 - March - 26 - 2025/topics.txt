@@ -1,0 +1,22 @@
+1. About Node.js 
+    Chrome V8 engine
+2. Routing 
+    /user          ->     Basic Route
+    /:id           ->     by parameters
+    /?name=sabed   ->     by Query parameters
+
+3. Response Methods
+    res.send()
+    res.json()
+    res.status()
+    res.sendStatus()
+    res.redirect()
+    res.render()
+    res.end()
+    res.set()
+    res.header()
+    res.type()
+    res.download()
+    res.sendFile()
+    res.cookie()
+    res.location()
