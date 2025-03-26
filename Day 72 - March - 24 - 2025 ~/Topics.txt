@@ -1,0 +1,9 @@
+step 1 Init project
+step 2 execute the top level code
+step 3 require module
+step 4 Event callback register
+step 5 Expired timer callbacks
+step 6 IO pooling
+step 7 setimmedate callbacks
+step 8 close callback
+step 9 check is task any task pending
