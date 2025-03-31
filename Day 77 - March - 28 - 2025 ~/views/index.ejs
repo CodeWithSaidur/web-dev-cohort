@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome Page</title>
+  </head>
+  <body>
+    <%- include("nav") %>
+    <h1>Welcome</h1>
+    <% if (message) { %>
+    <p><%= message %></p>
+    <% } else { %>
+    <p>No Message</p>
+    <% } %> <%= num %> <% num.forEach(n => { %>
+    <p><%= n*n %></p>
+    <% }) %>
+  </body>
+</html>

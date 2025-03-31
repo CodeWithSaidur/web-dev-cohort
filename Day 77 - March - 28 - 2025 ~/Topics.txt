@@ -1,0 +1,19 @@
+1. Request and properties
+    req.body
+    req.hostname
+    req.ip
+    req.method
+    req.originalUrl
+    req.accepts("html")
+    req.headers
+    req.is("text/html")
+2. EJS Template Engin
+    Intro to ejs
+    how to render ejs file
+    how t pass data server to ejs
+    foreach loop in e js 
+    fetching object in ejs from server
+3. form submission
+    partials
+    serving static file
+    

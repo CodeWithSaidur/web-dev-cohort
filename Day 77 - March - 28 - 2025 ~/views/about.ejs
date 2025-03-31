@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+  </head>
+  <body>
+    <%- include("nav") %>
+
+    <table>
+      <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.age %></td>
+        <td><%= user.city %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>   
+</html>

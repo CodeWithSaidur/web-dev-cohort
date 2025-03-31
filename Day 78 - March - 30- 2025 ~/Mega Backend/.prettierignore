@@ -1,0 +1,27 @@
+# Ignore node_modules
+node_modules
+
+# Ignore build/output folders
+dist
+build
+coverage
+
+# Ignore environment variables
+.env
+
+# Ignore package lock files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Ignore logs
+logs
+*.log
+
+# Ignore database files
+*.sqlite
+*.db
+
+# Ignore custom folders (adjust as needed)
+public
+static
